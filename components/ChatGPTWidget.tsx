@@ -29,8 +29,7 @@ const ChatGPTWidget = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",
@@ -74,7 +73,9 @@ const ChatGPTWidget = () => {
           <div
             key={idx}
             className={`flex ${
-              msg.role === "user" ? "justify-end text-right" : "justify-start w-[50%] text-left"
+              msg.role === "user"
+                ? "justify-end text-right"
+                : "justify-start w-[50%] text-left"
             }`}
           >
             <div
