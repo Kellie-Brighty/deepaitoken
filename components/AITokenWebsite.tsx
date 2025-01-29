@@ -33,7 +33,9 @@ import ChatGPTWidget from "./ChatGPTWidget";
 
 const AITokenWebsite = () => {
   const [copiedAddress, setCopiedAddress] = useState(false);
-  const [expandedPhases, setExpandedPhases] = useState<{ [key: number]: boolean }>({});
+  const [expandedPhases, setExpandedPhases] = useState<{
+    [key: number]: boolean;
+  }>({});
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [tokenStats] = useState({
     price: 0.075,
@@ -44,7 +46,7 @@ const AITokenWebsite = () => {
   });
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("0x1234567890abcdef1234567890abcdef12345678");
+    navigator.clipboard.writeText("000000000000000000");
     setCopiedAddress(true);
     setTimeout(() => setCopiedAddress(false), 2000);
   };
@@ -112,7 +114,7 @@ const AITokenWebsite = () => {
         {
           title: "Token Launch",
           details: [
-            "Deploy the token on Ethereum blockchain (or layer-2 scaling solutions if needed)",
+            "Deploy the token on XRP blockchain (or layer-2 scaling solutions if needed)",
             "Conduct an audit of the smart contracts with a trusted third-party firm",
           ],
         },
@@ -264,7 +266,7 @@ const AITokenWebsite = () => {
       icon: Link,
       title: "Seamless Integration",
       description:
-        "Designed for effortless interoperability with Ethereum protocols",
+        "Designed for effortless interoperability with XRP protocols",
       color: "text-blue-600",
     },
     {
@@ -280,8 +282,7 @@ const AITokenWebsite = () => {
     {
       name: "Funded by High Flyers",
       role: "CEO & Founder",
-      image:
-        "/high.jpg",
+      image: "/high.jpg",
     },
     {
       name: "Supported by MyShellAI",
@@ -299,7 +300,7 @@ const AITokenWebsite = () => {
     {
       question: "What is AI Token?",
       answer:
-        "AI Token is an Ethereum-based cryptocurrency designed to integrate AI capabilities into blockchain technology.",
+        "AI Token is an XRP-based cryptocurrency designed to integrate AI capabilities into blockchain technology.",
     },
     {
       question: "How can I purchase AI Token?",
@@ -423,40 +424,51 @@ const AITokenWebsite = () => {
               </motion.a>
             ))}
             <div className="flex space-x-4">
-              <motion.a
-                href="https://twitter.com"
+              <motion.p
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
                 className="text-blue-400 hover:text-white"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  className="bi bi-twitter-x"
-                  viewBox="0 0 16 16"
+                <a
+                  href="http://x.com/deepseekAIXRP"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-                </svg>
-              </motion.a>
-              <motion.a
-                href="https://telegram.org"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    className="bi bi-twitter-x"
+                    viewBox="0 0 16 16"
+                    // color="black"
+                  >
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                  </svg>
+                </a>
+              </motion.p>
+              <motion.p
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
                 className="text-blue-400 hover:text-white"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  className="bi bi-telegram"
-                  viewBox="0 0 16 16"
+                <a
+                  href="http://t.me/deepseekIAIXRP"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
-                </svg>
-              </motion.a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    className="bi bi-telegram"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                  </svg>
+                </a>
+              </motion.p>
             </div>
           </nav>
           <div className="md:hidden">
@@ -534,8 +546,8 @@ const AITokenWebsite = () => {
             Blockchain Meets AI Revolution
           </h2>
           <p className="text-xl max-w-2xl mx-auto mb-8 text-gray-300">
-            Deepseek AI Token is an innovative Ethereum-based token that
-            integrates advanced AI capabilities into the blockchain ecosystem.
+            Deepseek AI Token is an innovative XRP-based token that integrates
+            advanced AI capabilities into the blockchain ecosystem.
           </p>
 
           <motion.div
@@ -543,7 +555,7 @@ const AITokenWebsite = () => {
             className="bg-gray-800 border border-gray-700 rounded-lg p-4 max-w-md mx-auto flex items-center justify-between"
           >
             <span className="truncate">
-              Contract: 0x1234567890abcdef1234567890abcdef12345678
+              Contract: 00000000000000000000
             </span>
             <motion.button
               onClick={handleCopy}
@@ -700,41 +712,51 @@ const AITokenWebsite = () => {
           &copy; 2025 AI Token Building the Future, Democratically
         </p>
         <div className="flex justify-center space-x-4">
-          <motion.a
-            href="https://twitter.com"
+          <motion.p
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
             className="text-blue-400 hover:text-white"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="currentColor"
-              className="bi bi-twitter-x"
-              viewBox="0 0 16 16"
-              color="black"
+            <a
+              href="http://x.com/deepseekAIXRP"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-            </svg>
-          </motion.a>
-          <motion.a
-            href="https://telegram.org"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                className="bi bi-twitter-x"
+                viewBox="0 0 16 16"
+                // color="black"
+              >
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+              </svg>
+            </a>
+          </motion.p>
+          <motion.p
             whileHover={{ rotate: 360 }}
             transition={{ duration: 0.5 }}
             className="text-blue-400 hover:text-white"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="currentColor"
-              className="bi bi-telegram"
-              viewBox="0 0 16 16"
+            <a
+              href="http://t.me/deepseekIAIXRP"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
-            </svg>
-          </motion.a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                className="bi bi-telegram"
+                viewBox="0 0 16 16"
+              >
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+              </svg>
+            </a>
+          </motion.p>
         </div>
       </footer>
     </div>
