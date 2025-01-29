@@ -38,11 +38,11 @@ const AITokenWebsite = () => {
   }>({});
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [tokenStats] = useState({
-    price: 0.075,
-    marketCap: 25000000,
-    totalSupply: 100000000,
-    circulatingSupply: 50000000,
-    holders: 12500,
+    price: 0,
+    marketCap: 0,
+    totalSupply: 1000000,
+    circulatingSupply: 1000000,
+    holders: 0,
   });
 
   const handleCopy = () => {
@@ -554,9 +554,7 @@ const AITokenWebsite = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-gray-800 border border-gray-700 rounded-lg p-4 max-w-md mx-auto flex items-center justify-between"
           >
-            <span className="truncate">
-              Contract: 00000000000000000000
-            </span>
+            <span className="truncate">00000000000000000000</span>
             <motion.button
               onClick={handleCopy}
               whileTap={{ scale: 0.95 }}
@@ -645,25 +643,25 @@ const AITokenWebsite = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { label: "Price", value: `$${tokenStats.price}`, icon: Database },
+              { label: "Price", value: `$${tokenStats.price === 0 && "-"}`, icon: Database },
               {
                 label: "Market Cap",
-                value: `$${tokenStats.marketCap.toLocaleString()}`,
+                value: `$${tokenStats.marketCap.toLocaleString() === "0" && "-"}`,
                 icon: TrendingUp,
               },
               {
                 label: "Total Supply",
-                value: tokenStats.totalSupply.toLocaleString(),
+                value: tokenStats.totalSupply.toLocaleString() === "0" && "-",
                 icon: Book,
               },
               {
                 label: "Circulating Supply",
-                value: tokenStats.circulatingSupply.toLocaleString(),
+                value: tokenStats.circulatingSupply.toLocaleString() === "0" && "-",
                 icon: Globe,
               },
               {
                 label: "Holders",
-                value: tokenStats.holders.toLocaleString(),
+                value: tokenStats.holders.toLocaleString() === "0" && "-",
                 icon: Users,
               },
             ].map((stat, index) => (
