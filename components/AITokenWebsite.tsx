@@ -643,20 +643,26 @@ const AITokenWebsite = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              { label: "Price", value: `$${tokenStats.price === 0 && "-"}`, icon: Database },
+              {
+                label: "Price",
+                value: `$${tokenStats.price === 0 && "-"}`,
+                icon: Database,
+              },
               {
                 label: "Market Cap",
-                value: `$${tokenStats.marketCap.toLocaleString() === "0" && "-"}`,
+                value: `$${
+                  tokenStats.marketCap.toLocaleString() === "0" && "-"
+                }`,
                 icon: TrendingUp,
               },
               {
                 label: "Total Supply",
-                value: tokenStats.totalSupply.toLocaleString() === "0" && "-",
+                value: tokenStats.totalSupply.toLocaleString(),
                 icon: Book,
               },
               {
                 label: "Circulating Supply",
-                value: tokenStats.circulatingSupply.toLocaleString() === "0" && "-",
+                value: tokenStats.circulatingSupply.toLocaleString(),
                 icon: Globe,
               },
               {
